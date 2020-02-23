@@ -3,8 +3,8 @@ import time
 import matplotlib.pyplot as plt
 
 
-
-print("To be sorted...")
+print("MERGE SORT")
+print("--To be sorted--")
 
 
 print("  ")
