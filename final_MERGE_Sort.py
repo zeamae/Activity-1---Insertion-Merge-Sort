@@ -2,148 +2,237 @@ import random
 import time
 import matplotlib.pyplot as plt
 
-start_timemten = time.time()
 
-print("To be sorted:")
+
+print("To be sorted...")
+
 
 print("  ")
-mtenlist = []
-for i in range(0,10):
-    mt = random.randint(0,10)
-    mtenlist.append(mt)
+m1list = []
+z1 = int(input("No. of integers: "))
+for i in range(0, z1):
+    m1st = random.randint(0, z1)
+    m1list.append(m1st)
+starttimem1 = time.time()
 
-def Merge_SortTen(mtenlist):
-    
-    if len(mtenlist)>1:
-        mid = len(mtenlist)//2
-        array1 = mtenlist[:mid]
-        array2 = mtenlist[mid:]
-        Merge_SortTen(array1)
-        Merge_SortTen(array2)
-        i=0
-        j=0
-        k=0
+
+def Merge1(m1list):
+
+    if len(m1list) > 1:
+        mid = len(m1list) // 2
+        array1 = m1list[:mid]
+        array2 = m1list[mid:]
+        Merge1(array1)
+        Merge1(array2)
+        i = 0
+        j = 0
+        k = 0
         while i < len(array1) and j < len(array2):
             if array1[i] <= array2[j]:
-                mtenlist[k] = array1[i]
-                i = i+1
+                m1list[k] = array1[i]
+                i = i + 1
             else:
-                mtenlist[k] = array2[j]
-                j = j+1
-            k = k+1
+                m1list[k] = array2[j]
+                j = j + 1
+            k = k + 1
         while i < len(array1):
-            mtenlist[k] = array1[i]
-            i = i+1
-            k = k+1
+            m1list[k] = array1[i]
+            i = i + 1
+            k = k + 1
         while j < len(array2):
-            mtenlist[k] = array2[j]
-            j = j+1
-            k = k+1
+            m1list[k] = array2[j]
+            j = j + 1
+            k = k + 1
 
-Merge_SortTen(mtenlist)
-end_timemten = time.time()
-mergeten = end_timemten - start_timemten
-print('10 Integers')
-print(mtenlist)
-print('Execution Time: ', mergeten)
+
+Merge1(m1list)
+endtime1 = time.time()
+m1 = endtime1 - starttimem1
+print(m1list)
+print('Execution Time: ', m1)
+print("")
+
+print("----")
+m2list = []
+z2 = int(input("No. of integers: "))
+for i in range(0, z2):
+    m2nd = random.randint(0, z2)
+    m2list.append(m2nd)
+starttimem2 = time.time()
+
+
+def Merge2(m2list):
+    if len(m2list) > 1:
+        mid = len(m2list) // 2
+        array1 = m2list[:mid]
+        array2 = m2list[mid:]
+        Merge2(array1)
+        Merge2(array2)
+        i = 0
+        j = 0
+        k = 0
+        while i < len(array1) and j < len(array2):
+            if array1[i] <= array2[j]:
+                m2list[k] = array1[i]
+                i = i + 1
+            else:
+                m2list[k] = array2[j]
+                j = j + 1
+            k = k + 1
+        while i < len(array1):
+            m2list[k] = array1[i]
+            i = i + 1
+            k = k + 1
+        while j < len(array2):
+            m2list[k] = array2[j]
+            j = j + 1
+            k = k + 1
+
+
+Merge2(m2list)
+endtime2 = time.time()
+m2 = endtime2 - starttimem2
+print(m2list)
+print('Execution Time: ', m2)
+print("")
+
+print("----")
+m3list = []
+z3 = int(input("No. of integers: "))
+for i in range(0, z3):
+    m3rd = random.randint(0, z3)
+    m3list.append(m3rd)
+starttimem3 = time.time()
+
+
+def Merge3(m3list):
+    if len(m3list) > 1:
+        mid = len(m3list) // 2
+        array1 = m3list[:mid]
+        array2 = m3list[mid:]
+        Merge3(array1)
+        Merge3(array2)
+        i = 0
+        j = 0
+        k = 0
+        while i < len(array1) and j < len(array2):
+            if array1[i] <= array2[j]:
+                m3list[k] = array1[i]
+                i = i + 1
+            else:
+                m3list[k] = array2[j]
+                j = j + 1
+            k = k + 1
+        while i < len(array1):
+            m3list[k] = array1[i]
+            i = i + 1
+            k = k + 1
+        while j < len(array2):
+            m3list[k] = array2[j]
+            j = j + 1
+            k = k + 1
+
+
+Merge3(m3list)
+endtime3 = time.time()
+m3 = endtime3 - starttimem3
+print(m3list)
+print('Execution Time: ', m3)
+print("")
+
+print("----")
+m4list = []
+z4 = int(input("No. of integers: "))
+for i in range(0, z4):
+    m4th = random.randint(0, z4)
+    m4list.append(m4th)
+starttimem4 = time.time()
+
+def Merge4(m4list):
+    if len(m4list) > 1:
+        mid = len(m4list) // 2
+        array1 = m4list[:mid]
+        array2 = m4list[mid:]
+        Merge4(array1)
+        Merge4(array2)
+        i = 0
+        j = 0
+        k = 0
+        while i < len(array1) and j < len(array2):
+            if array1[i] <= array2[j]:
+                m4list[k] = array1[i]
+                i = i + 1
+            else:
+                m4list[k] = array2[j]
+                j = j + 1
+            k = k + 1
+        while i < len(array1):
+            m4list[k] = array1[i]
+            i = i + 1
+            k = k + 1
+        while j < len(array2):
+            m4list[k] = array2[j]
+            j = j + 1
+            k = k + 1
+
+Merge4(m4list)
+endtime4 = time.time()
+m4 = endtime4 - starttimem4
+print(m4list)
+print('Execution Time: ', m4)
 print("")
 
 
 print("----")
-start_timemhun = time.time()
-mhunlist = []
-for i in range(0,100):
-    mhun = random.randint(0,100)
-    mhunlist.append(mhun)
+m5list = []
+z5 = int(input("No. of integers: "))
+for i in range(0, z5):
+    m5th = random.randint(0, z5)
+    m5list.append(m5th)
+starttimem5 = time.time()
 
-def Merge_SortHun(mhunlist):
-    
-    if len(mhunlist)>1:
-        mid = len(mhunlist)//2
-        array1 = mhunlist[:mid]
-        array2 = mhunlist[mid:]
-        Merge_SortHun(array1)
-        Merge_SortHun(array2)
-        i=0
-        j=0
-        k=0
+def Merge5(m5list):
+    if len(m5list) > 1:
+        mid = len(m5list) // 2
+        array1 = m5list[:mid]
+        array2 = m5list[mid:]
+        Merge5(array1)
+        Merge5(array2)
+        i = 0
+        j = 0
+        k = 0
         while i < len(array1) and j < len(array2):
             if array1[i] <= array2[j]:
-                mhunlist[k] = array1[i]
-                i = i+1
+                m5list[k] = array1[i]
+                i = i + 1
             else:
-                mhunlist[k] = array2[j]
-                j = j+1
-            k = k+1
+                m5list[k] = array2[j]
+                j = j + 1
+            k = k + 1
         while i < len(array1):
-            mhunlist[k] = array1[i]
-            i = i+1
-            k = k+1
+            m5list[k] = array1[i]
+            i = i + 1
+            k = k + 1
         while j < len(array2):
-            mhunlist[k] = array2[j]
-            j = j+1
-            k = k+1
+            m5list[k] = array2[j]
+            j = j + 1
+            k = k + 1
 
-Merge_SortHun(mhunlist)
-end_timemhun = time.time()
-mergehun = end_timemhun - start_timemhun
-print('100 Integers')
-print(mhunlist)
-print('Execution Time: ', end_timemhun - start_timemhun)
+Merge5(m5list)
+endtime5 = time.time()
+m5 = endtime5 - starttimem5
+print(m5list)
+print('Execution Time: ', m5)
 print("")
 
 
-print("----")
-start_timetho = time.time()
-mthoulist = []
-for i in range(0,1000):
-    mthou = random.randint(0,1000)
-    mthoulist.append(mthou)
+left = [1, 2, 3, 4, 5]
+height = [m1, m2, m3, m4, m5]
 
-def Merge_SortThou(mthoulist):
-    
-    if len(mthoulist)>1:
-        mid = len(mthoulist)//2
-        array1 = mthoulist[:mid]
-        array2 = mthoulist[mid:]
-        Merge_SortThou(array1)
-        Merge_SortThou(array2)
-        i=0
-        j=0
-        k=0
-        while i < len(array1) and j < len(array2):
-            if array1[i] <= array2[j]:
-                mthoulist[k] = array1[i]
-                i = i+1
-            else:
-                mthoulist[k] = array2[j]
-                j = j+1
-            k = k+1
-        while i < len(array1):
-            mthoulist[k] = array1[i]
-            i = i+1
-            k = k+1
-        while j < len(array2):
-            mthoulist[k] = array2[j]
-            j = j+1
-            k = k+1
-Merge_SortThou(mthoulist)
-end_timemthou = time.time()
-mergethou = end_timemthou - start_timetho
-print('1000 Integers')
-print(mthoulist)
-print('Execution Time: ', mergethou)
-print("")
-
-
-
-left = [1,2,3]
-height = [mergeten, mergehun, mergethou]
-
-tick_label = ['10', '100', '1000']
+tick_label = [z1, z2, z3, z4, z5]
 
 plt.bar(left, height, tick_label=tick_label,
-        width=0.8, color=['red', 'green'])
+        width=0.5, color=['green'])
 
 plt.xlabel('Number of Integers')
 plt.ylabel('Execution Time (sec)')
